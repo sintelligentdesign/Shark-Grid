@@ -1,0 +1,34 @@
+// Shark Visibility addon v1.0 for Shark Grid
+// Developed by Ellie Cochran
+
+// Small size
+.hide-for-small
+    display: none
+.hide-for-medium, .hide-for-large
+    display: inherit
+.show-for-small
+    display: inherit
+.show-for-medium, .show-for-large
+    display: none
+    
+// Medium size
+@media screen and (min-width: $breakpoint-medium)
+    .hide-for-medium
+        display: none
+    .hide-for-small, .hide-for-large
+        display: inherit
+    .show-for-medium
+        display: inherit
+    .show-for-small, .show-for-large
+        display: none
+    
+// Large size
+@media screen and (min-width: $breakpoint-large)
+    .hide-for-large
+        display: none
+    .hide-for-small, .hide-for-medium
+        display: inherit
+    .show-for-large
+        display: inherit
+    .show-for-small, .show-for-medium
+        display: none

@@ -1,0 +1,67 @@
+// Shark Grid v1.3
+// Developed by Ellie Cochran
+
+$container-width: 62.5rem
+
+$column-number: 12
+$gutter-size: 1.875rem
+
+$breakpoint-medium: 40rem   /* Minimum size to qualify for "medium" sizing */
+$breakpoint-large: 64rem    /* Minimum size to qualify for "large" sizing */
+
+// Container
+.shark-container
+    width: $container-width
+    max-width: 100%
+    text-align: center
+    margin: auto
+    img
+        max-width: 100%
+    div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, input, article, aside, footer, header, nav
+        text-align: left
+    & * /* Set border-box on all grid elements */
+        box-sizing: border-box
+    
+// Clearfix
+.row:before, .row:after
+    content: ""
+    display: table
+    clear: both
+    
+// Column defaults
+.column
+    float: left
+    min-height: 1px
+    padding-left: $gutter-size / 2
+    padding-right: $gutter-size / 2
+    
+// Size iterator ("small" applies to small up)
+@for $i from 1 through $column-number
+    .small-#{$i}
+        width: (100% / $column-number) * $i
+// Offset iterator
+@for $i from 1 through $column-number - 1   /* There is no *-offset-(max column number) because that would be an offset of 100% and that wouldn't make sense */
+    .small-offset-#{$i}
+        margin-left: (100% / $column-number) * $i
+    
+// Medium size
+@media screen and (min-width: $breakpoint-medium)
+    // Size iterator
+    @for $i from 1 through $column-number
+        .medium-#{$i}
+            width: (100% / $column-number) * $i
+    // Offset iterator
+    @for $i from 1 through $column-number - 1
+        .medium-offset-#{$i}
+            margin-left: (100% / $column-number) * $i
+    
+// Large size
+@media screen and (min-width: $breakpoint-large)
+    // Size iterator
+    @for $i from 1 through $column-number
+        .large-#{$i}
+            width: (100% / $column-number) * $i
+    // Offset iterator
+    @for $i from 1 through $column-number - 1
+        .large-offset-#{$i}
+            margin-left: (100% / $column-number) * $i
