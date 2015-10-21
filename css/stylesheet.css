@@ -1,14 +1,15 @@
-.shark-container {
+body {
   width: 62.5rem;
   max-width: 100%;
   text-align: center;
   margin: auto; }
-  .shark-container img {
-    max-width: 100%; }
-  .shark-container div, .shark-container ul, .shark-container ol, .shark-container li, .shark-container dl, .shark-container dt, .shark-container dd, .shark-container h1, .shark-container h2, .shark-container h3, .shark-container h4, .shark-container h5, .shark-container h6, .shark-container pre, .shark-container form, .shark-container p, .shark-container blockquote, .shark-container input, .shark-container article, .shark-container aside, .shark-container footer, .shark-container header, .shark-container nav {
+  body div, body ul, body ol, body li, body dl, body dt, body dd, body h1, body h2, body h3, body h4, body h5, body h6, body pre, body form, body p, body blockquote, body input, body article, body aside, body footer, body header, body nav {
     text-align: left; }
-  .shark-container * {
+  body * {
     box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
 
 .row:before, .row:after {
   content: "";

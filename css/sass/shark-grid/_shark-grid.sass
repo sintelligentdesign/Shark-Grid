@@ -10,17 +10,17 @@ $breakpoint-medium: 40rem   /* Minimum size to qualify for "medium" sizing */
 $breakpoint-large: 64rem    /* Minimum size to qualify for "large" sizing */
 
 // Container
-.shark-container
+body
     width: $container-width
     max-width: 100%
     text-align: center
     margin: auto
-    img
-        max-width: 100%
     div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, input, article, aside, footer, header, nav
         text-align: left
     & * /* Set border-box on all grid elements */
         box-sizing: border-box
+img
+    max-width: 100%
     
 // Clearfix
 .row:before, .row:after
