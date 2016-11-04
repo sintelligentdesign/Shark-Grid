@@ -1,34 +1,57 @@
-// Shark Visibility addon v1.0 for Shark Grid
+// Shark Visibility addon v2.0 for Shark Grid
 // Developed by Ellie Cochran
 
 // Small size
-.hide-for-small
+=hide-for-small
     display: none
-.hide-for-medium, .hide-for-large
+=hide-for-medium 
     display: inherit
-.show-for-small
+=hide-for-large
     display: inherit
-.show-for-medium, .show-for-large
+=show-for-small
+    display: inherit
+=show-for-medium
+    display: none
+=show-for-large
     display: none
     
 // Medium size
-@media screen and (min-width: $breakpoint-medium)
-    .hide-for-medium
+=hide-for-medium
+    @media screen and (min-width: $breakpoint-medium)
         display: none
-    .hide-for-small, .hide-for-large
+=hide-for-small
+    @media screen and (min-width: $breakpoint-medium)
         display: inherit
-    .show-for-medium
+=hide-for-large
+    @media screen and (min-width: $breakpoint-medium)
         display: inherit
-    .show-for-small, .show-for-large
+=show-for-medium
+    @media screen and (min-width: $breakpoint-medium)
+        display: inherit
+=show-for-small
+    @media screen and (min-width: $breakpoint-medium)
+        display: none
+=show-for-large
+    @media screen and (min-width: $breakpoint-medium)
         display: none
     
 // Large size
 @media screen and (min-width: $breakpoint-large)
-    .hide-for-large
+=hide-for-large
+    @media screen and (min-width: $breakpoint-large)
         display: none
-    .hide-for-small, .hide-for-medium
+=hide-for-small
+    @media screen and (min-width: $breakpoint-large)
         display: inherit
-    .show-for-large
+=hide-for-medium
+    @media screen and (min-width: $breakpoint-large)
         display: inherit
-    .show-for-small, .show-for-medium
+=show-for-large
+    @media screen and (min-width: $breakpoint-large)
+        display: inherit
+=show-for-small
+    @media screen and (min-width: $breakpoint-large)
+        display: none
+=show-for-medium
+    @media screen and (min-width: $breakpoint-large)
         display: none
